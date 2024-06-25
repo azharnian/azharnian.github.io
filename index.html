@@ -2,40 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Github Pages - Anas - Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+    <title>About Anas - A Resume</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', ()=>{
+            document.getElementById('year').innerHTML = new Date().getFullYear();
+        }) 
+    </script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 1.25pt;
+            word-spacing: 2.5pt;
+        }
+
+        a {
+            color: black;
+        }
+
+        a:hover {
+            background-color: black;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="#">Home</a>
-                </li>
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Experience</a>
-                </li>
-                <li>
-                    <a href="./projects/kumbang/index.html">Projects</a>
-                </li>
-            </ul>
-        </nav>
+        <h1>Anas Azhar</h1>
+        <h2>Teaching, coding, and so on.</h2>
+        <small>Take the first step towards a great ideas.</small>
+        <hr>
     </header>
-    <section>
-        <img src="https://img.okezone.com/content/2023/04/07/406/2794924/dikenal-hewan-yang-ramah-apakah-capybara-bisa-menggigit-SngxxK7IFu.jpeg" alt="Capybara" height="400px">
-        <h1>Welcome, to my github pages, enjoy!</h1>
-        <p style="width: 60%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quod impedit accusamus omnis voluptatibus labore, autem iusto deserunt deleniti temporibus earum aliquid ipsum modi placeat! Eligendi obcaecati excepturi id libero.</p>
-    </section>
-    <footer>
+    <main>
+        <h3>Stuff</h3>
+        <ul>
+            <li><a href="https://blog.logicstation.my.id" target="_blank">Engineering</a></li>
+            <li><a href="https://github.com/azharnian" target="_blank">Github</a></li>
+            <li><a href="https://guru.kemdikbud.go.id/profil/O16eMzAL6N" target="_blank">Teaching Platform</a></li>
+            <li><a href="https://www.youtube.com/@anasaz_har" target="_blank">Youtube</a></li>
+        </ul>
+    
+        <h3>Projects</h3>
+        <ul>
+            <li><a href="https://logicstation.my.id/" target="_blank">Logicstation</a></li>
+            <li><a href="https://game-guess-the-number-gamma.vercel.app/" target="_blank">Guessing Number Game</a></li>
+            <li><a href="https://anassty.pythonanywhere.com/" target="_blank">Parents Information System</a></li>
+            <li><a href="https://github.com/azharnian/moodle_course_log_analyzer" target="_blank">Course Log Analyzer</a></li>
+        </ul>
+    
+        <h3>Books</h3>
+        <ul>
+            <li><a href="#" >Coming Soon</a></li>
+        </ul>
+    
+        <h3>Socials</h3>
+        <ul>
+            <li><a href="https://www.instagram.com/anasaz.har/">Instagram</a></li>
+            <li><a href="https://www.linkedin.com/in/anasazhar/">LinkedIn</a></li>
+            <li><a href="mailto:anas.sty@gmail.com">Mail to anas.sty@gmail.com</a></li>
+        </ul>
+    </main>
 
+    <footer>
+        <small>copyandpaste &copy; <span id="year"></span></small>
     </footer>
 </body>
 </html>
