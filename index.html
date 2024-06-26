@@ -1,14 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3YXDNYY873"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-3YXDNYY873');
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script id="listItem" type="text/x-handlebars-template">
+        {{#each items}}
+            <li><a href="{{ url }}" target="_blank">{{ title }}</a></li>
+        {{/each}}
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', ()=>{
+            const listItemTemplate = Handlebars.compile(document.getElementById('listItem').innerHTML);
+
+        async function fetchData(url){
+            const response = await fetch(url);
+            const data = await response.json();
+            return data
+        }
+
+        function renderData(data){
+            document.getElementById('stuff').innerHTML = listItemTemplate({items : data.stuff});
+
+            document.getElementById('projects').innerHTML = listItemTemplate({items : data.projects});
+
+            document.getElementById('books').innerHTML = listItemTemplate({items : data.books})
+
+            document.getElementById('socials').innerHTML = listItemTemplate({items : data.socials})        
+        }
+
+        async function initialLoad(){
+            const url = './data.json';
+            const data = await fetchData(url);
+            renderData(data);
+        }
+
+        initialLoad();
+            document.getElementById('year').innerHTML = new Date().getFullYear();
+
+        }) 
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Anas - A Resume</title>
-    <script>
-        document.addEventListener('DOMContentLoaded', ()=>{
-            document.getElementById('year').innerHTML = new Date().getFullYear();
-        }) 
-    </script>
+    <meta name="description" content="Official Website Anas Azhar"/>
+    <meta name="robots" content="Anas Azhar, Resume Anas Azhar, Anas, Personal CV Anas Azhar"/>
+    <meta name="googlebot" content="Official Website Anas Azhar"/>
+    <meta name="googlebot" content="notranslate"/>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
@@ -35,34 +79,17 @@
     </header>
     <main>
         <h3>Stuff</h3>
-        <ul>
-            <li><a href="https://blog.logicstation.my.id" target="_blank">Engineering</a></li>
-            <li><a href="https://github.com/azharnian" target="_blank">Github</a></li>
-            <li><a href="https://guru.kemdikbud.go.id/profil/O16eMzAL6N" target="_blank">Teaching Platform</a></li>
-            <li><a href="https://www.youtube.com/@anasaz_har" target="_blank">Youtube</a></li>
-        </ul>
+        <ul id="stuff"></ul>
     
         <h3>Projects</h3>
-        <ul>
-            <li><a href="https://logicstation.my.id/" target="_blank">Logicstation</a></li>
-            <li><a href="https://game-guess-the-number-gamma.vercel.app/" target="_blank">Guessing Number Game</a></li>
-            <li><a href="https://anassty.pythonanywhere.com/" target="_blank">Parents Information System</a></li>
-            <li><a href="https://github.com/azharnian/moodle_course_log_analyzer" target="_blank">Course Log Analyzer</a></li>
-        </ul>
+        <ul id="projects"></ul>
     
         <h3>Books</h3>
-        <ul>
-            <li><a href="#" >Coming Soon</a></li>
-        </ul>
+        <ul id="books"></ul>
     
         <h3>Socials</h3>
-        <ul>
-            <li><a href="https://www.instagram.com/anasaz.har/">Instagram</a></li>
-            <li><a href="https://www.linkedin.com/in/anasazhar/">LinkedIn</a></li>
-            <li><a href="mailto:anas.sty@gmail.com">Mail to anas.sty@gmail.com</a></li>
-        </ul>
+        <ul id="socials"></ul>
     </main>
-
     <footer>
         <small>copyandpaste &copy; <span id="year"></span></small>
     </footer>

@@ -1,0 +1,58 @@
+{
+    "stuff" : [
+        {
+            "url" : "https://blog.logicstation.my.id",
+            "title" : "Engineering"
+        },
+        {
+            "url" : "https://github.com/azharnian",
+            "title" : "Github"
+        },
+        {
+            "url" : "https://guru.kemdikbud.go.id/profil/O16eMzAL6N",
+            "title" : "Teaching"
+        },
+        {
+            "url" : "https://www.youtube.com/@anasaz_har",
+            "title" : "Youtube"
+        }
+    ],
+    "projects" : [
+        {
+            "url" : "https://logicstation.my.id/",
+            "title" : "Logicstation"
+        },
+        {
+            "url" : "https://game-guess-the-number-gamma.vercel.app/",
+            "title" : "Guessing Number Game"
+        },
+        {
+            "url" : "https://anassty.pythonanywhere.com/",
+            "title" : "Parents Information System"
+        },
+        {
+            "url" : "https://github.com/azharnian/moodle_course_log_analyzer",
+            "title" : "Course Log Analyzer"
+        }
+    ],
+    "books" : [
+        {
+            "url" : "",
+            "title" : "Coming Soon"
+        }
+    ],
+    "socials" : [
+        {
+            "url" : "https://www.instagram.com/anasaz.har/",
+            "title" : "Instagram"
+        },
+        {
+            "url" : "https://www.linkedin.com/in/anasazhar/",
+            "title" : "LinkedIn"
+        },
+        {
+            "url" : "mailto:anasaz.har@icloud.com",
+            "title" : "anasaz.har@icloud.com"
+        }
+    ]
+}
